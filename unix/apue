@@ -1,0 +1,21 @@
+1、下载地址
+
+	http://www.apuebook.com/code3e.html
+
+2、进入压缩包所在目录，解压目录
+
+	tar zvxf src.3e.tar.gz
+
+3、make
+  
+    在这个过程中，你会看到最后由于can,t find -lbsd而不能make成功，解决办法是添加libbsd.a的静态链接库  
+       sudo apt-get install libbsd-dev  
+
+4、再次make
+
+5、在编译成功的基础上，我们进行安装apue.h文件及其对应的静态链接库libapue.a
+ 
+      sudo cp ./include/apue.h /usr/include/
+      sudo cp ./lib/libapue.a /usr/local/lib/
+
+6、以上环境搭建成功了
